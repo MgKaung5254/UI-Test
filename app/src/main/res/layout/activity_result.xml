@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/back"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_margin="@dimen/dp_20"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_10"
+            android:text="@string/search_results"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/back"
+            app:layout_constraintStart_toEndOf="@id/back"
+            app:layout_constraintTop_toTopOf="@id/back" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/currentAddressImageView"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_margin="@dimen/dp_20"
+            android:padding="@dimen/dp_5"
+            android:src="@drawable/ic_icoaddress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/currentAddressLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_5"
+            android:text="@string/location"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_10"
+            app:layout_constraintStart_toEndOf="@id/currentAddressImageView"
+            app:layout_constraintTop_toTopOf="@id/currentAddressImageView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/currentAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:text="@string/current_location"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toBottomOf="@id/currentAddressImageView"
+            app:layout_constraintStart_toEndOf="@id/currentAddressImageView"
+            app:layout_constraintTop_toBottomOf="@id/currentAddressLabel" />
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/currentAddressImageView" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/dateTimeImageView"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_margin="@dimen/dp_20"
+            android:padding="@dimen/dp_5"
+            android:src="@drawable/ic_icodated"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/dateAndTimeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_5"
+            android:text="@string/date_and_time"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_10"
+            app:layout_constraintStart_toEndOf="@id/dateTimeImageView"
+            app:layout_constraintTop_toTopOf="@id/dateTimeImageView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/dateAndTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:text="@string/now"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toBottomOf="@id/dateTimeImageView"
+            app:layout_constraintStart_toEndOf="@id/dateTimeImageView"
+            app:layout_constraintTop_toBottomOf="@id/dateAndTimeLabel" />
+
+        <View
+            android:id="@+id/verticalDivider"
+            android:layout_width="@dimen/dp_1"
+            android:layout_height="0dp"
+            android:background="@color/grey"
+            app:layout_constraintBottom_toTopOf="@id/divider2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/divider1" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/durationImageView"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_margin="@dimen/dp_20"
+            android:padding="@dimen/dp_5"
+            android:src="@drawable/ic_icotime"
+            app:layout_constraintStart_toEndOf="@id/verticalDivider"
+            app:layout_constraintTop_toBottomOf="@id/divider1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/durationLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_5"
+            android:text="@string/duration"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_10"
+            app:layout_constraintStart_toEndOf="@id/durationImageView"
+            app:layout_constraintTop_toTopOf="@id/durationImageView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:text="@string/hr_1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toBottomOf="@id/durationImageView"
+            app:layout_constraintStart_toEndOf="@id/durationImageView"
+            app:layout_constraintTop_toBottomOf="@id/durationLabel" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dateTimeImageView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/results"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/purple"
+            android:padding="@dimen/dp_20"
+            android:text="@string/cars_found"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/filter"
+            android:layout_width="@dimen/dp_70"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:background="@drawable/rounded_outline_white"
+            android:padding="@dimen/dp_10"
+            android:text="@string/filter"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_10"
+            app:layout_constraintBottom_toBottomOf="@id/results"
+            app:layout_constraintEnd_toStartOf="@id/map"
+            app:layout_constraintTop_toTopOf="@id/results" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/map"
+            android:layout_width="@dimen/dp_70"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:background="@drawable/rounded_outline_white"
+            android:padding="@dimen/dp_10"
+            android:text="@string/map"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_10"
+            app:layout_constraintBottom_toBottomOf="@id/results"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/results" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/purple"
+            android:paddingStart="@dimen/dp_5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/results"
+            tools:itemCount="5"
+            tools:listitem="@layout/car_list_row" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

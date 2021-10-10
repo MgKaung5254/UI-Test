@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="carItem"
+            type="com.kmlinn.uitest.Car" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/carCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/carImage"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
+            android:scaleType="fitXY"
+            android:padding="@dimen/dp_10"
+            android:background="@drawable/rounded_outline_white"
+            android:src="@drawable/ic_group23_purple"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/car_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dp_10"
+            android:text="@{carItem.name}"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/carImage"
+            app:layout_constraintTop_toTopOf="@id/carImage" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/car_model"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dp_10"
+            android:text="@{carItem.model}"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintStart_toEndOf="@id/carImage"
+            app:layout_constraintTop_toBottomOf="@id/car_name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dp_5"
+            android:paddingEnd="@dimen/dp_5"
+            android:text="*"
+            android:textColor="@color/pink"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/car_model"
+            app:layout_constraintTop_toBottomOf="@id/car_name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/seat_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dp_10"
+            android:text="@{carItem.seatNo}"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/divider"
+            app:layout_constraintTop_toBottomOf="@id/car_name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:background="@drawable/rounded_outline_grey"
+            android:text="@{carItem.distance}"
+            android:textColor="@color/green"
+            android:textSize="@dimen/sp_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/seat_no"
+            app:layout_constraintTop_toBottomOf="@id/car_name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/rentalFeeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dp_10"
+            android:text="@string/rental_fee"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_10"
+            app:layout_constraintBottom_toTopOf="@id/rentalFee"
+            app:layout_constraintStart_toEndOf="@id/carImage" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/rentalFee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dp_10"
+            android:text="@{carItem.rentalFee}"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintBottom_toBottomOf="@id/carImage"
+            app:layout_constraintStart_toEndOf="@id/carImage" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/milageFeeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dp_10"
+            android:text="@string/mileage_fee"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_10"
+            app:layout_constraintBottom_toTopOf="@id/mileageFee"
+            app:layout_constraintStart_toStartOf="@id/mileageFee" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/mileageFee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dp_10"
+            android:text="@{carItem.mileageFee}"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintBottom_toBottomOf="@id/carImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/rentalFee" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@color/grey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/carImage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

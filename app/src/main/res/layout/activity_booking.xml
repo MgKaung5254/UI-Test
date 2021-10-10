@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/back"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_margin="@dimen/dp_20"
+                android:src="@drawable/ic_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/copy"
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:src="@drawable/ic_icoactioncopy"
+                app:layout_constraintBottom_toBottomOf="@id/back"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/back" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:text="@string/booking_id"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_16"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/back"
+                app:layout_constraintEnd_toStartOf="@id/copy"
+                app:layout_constraintTop_toTopOf="@id/back" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/car_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_20"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_24"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/back" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/car_model"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_5"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_18"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/car_name" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:background="@drawable/rounded_outline_blue"
+                android:paddingStart="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingEnd="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_5"
+                android:text="@string/confirmed"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintBottom_toBottomOf="@id/car_model"
+                app:layout_constraintStart_toEndOf="@id/car_model"
+                app:layout_constraintTop_toTopOf="@id/car_model" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/durationLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:background="@drawable/rounded_outline_purple"
+                android:padding="@dimen/dp_10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/car_model">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/duration"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_10"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="03"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/duration" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/dayLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/days"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_10"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/day"
+                    app:layout_constraintStart_toStartOf="@id/day"
+                    app:layout_constraintTop_toBottomOf="@id/day" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/colon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:layout_marginEnd="@dimen/dp_5"
+                    android:text=":"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintBottom_toBottomOf="@id/day"
+                    app:layout_constraintEnd_toStartOf="@id/hour"
+                    app:layout_constraintStart_toEndOf="@id/day"
+                    app:layout_constraintTop_toTopOf="@id/day" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/hour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/colon"
+                    app:layout_constraintTop_toBottomOf="@id/duration" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/hourLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hours"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_10"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/hour"
+                    app:layout_constraintStart_toStartOf="@id/hour"
+                    app:layout_constraintTop_toBottomOf="@id/hour" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/startDateLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                app:layout_constraintBottom_toBottomOf="@id/durationLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/durationLayout">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/startDateLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/start_date"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/sp_10"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/startDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mon, 1 Nov 2020"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/startDateLabel" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11:34am"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/startDate" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/endDateLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_10"
+                app:layout_constraintBottom_toBottomOf="@id/durationLayout"
+                app:layout_constraintEnd_toStartOf="@id/durationLayout"
+                app:layout_constraintStart_toEndOf="@id/startDateLayout"
+                app:layout_constraintTop_toTopOf="@id/durationLayout">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/endDateLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/end_date"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/sp_10"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/endDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tue, 2 Nov 2020"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/endDateLabel" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/endTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11:34am"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/endDate" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/addToCalendar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_5"
+                android:background="@drawable/rounded_outline_grey"
+                android:drawableStart="@drawable/ic_add"
+                android:maxLines="1"
+                android:padding="@dimen/dp_20"
+                android:singleLine="true"
+                android:text="@string/add_to_calender"
+                android:textAlignment="textStart"
+                app:layout_constraintEnd_toStartOf="@id/extend"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/durationLayout" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/extend"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:background="@drawable/rounded_outline_grey"
+                android:drawableStart="@drawable/ic_ctasecondarywithicodark"
+                android:maxLines="1"
+                android:padding="@dimen/dp_20"
+                android:singleLine="true"
+                android:text="@string/extend"
+                android:textAlignment="textStart"
+                app:layout_constraintBottom_toBottomOf="@id/addToCalendar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/addToCalendar"
+                app:layout_constraintTop_toBottomOf="@id/durationLayout" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/carImage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_200"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:padding="@dimen/dp_30"
+                android:src="@drawable/ic_group23_purple"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/addToCalendar" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/pickUpCarAt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_20"
+                android:text="@string/pick_up_car"
+                android:textColor="@color/pink"
+                android:textSize="@dimen/sp_14"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/carImage" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/pickUpImageView"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/dp_20"
+                android:src="@drawable/ic_group23_purple"
+                app:layout_constraintBottom_toBottomOf="@id/imv2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pickUpCarAt" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/pickUpAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:lines="2"
+                android:singleLine="false"
+                android:text="@string/pick_up_address"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/pickUpImageView"
+                app:layout_constraintTop_toTopOf="@id/pickUpImageView" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/pickUpLvl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:text="@string/lvl"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintStart_toEndOf="@id/pickUpImageView"
+                app:layout_constraintTop_toBottomOf="@id/pickUpAddress" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/getDirections"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/rounded_outline_grey"
+                android:maxLines="1"
+                android:padding="@dimen/dp_10"
+                android:singleLine="true"
+                android:text="@string/get_direction"
+                android:textAlignment="textStart"
+                app:drawableLeftCompat="@drawable/ic_ctasecondarywithicodark_2"
+                app:layout_constraintStart_toEndOf="@id/pickUpImageView"
+                app:layout_constraintTop_toBottomOf="@id/pickUpLvl" />
+
+            <!-- for ImageViews -->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imv1"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="@drawable/rounded_outline_grey"
+                android:src="@drawable/ic_add"
+                app:layout_constraintEnd_toStartOf="@id/imv2"
+                app:layout_constraintStart_toEndOf="@id/pickUpImageView"
+                app:layout_constraintTop_toBottomOf="@id/getDirections" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imv2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="@drawable/rounded_outline_grey"
+                android:src="@drawable/ic_add"
+                app:layout_constraintEnd_toStartOf="@id/imv3"
+                app:layout_constraintStart_toEndOf="@id/imv1"
+                app:layout_constraintTop_toBottomOf="@id/getDirections" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imv3"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="@drawable/rounded_outline_grey"
+                android:src="@drawable/ic_add"
+                app:layout_constraintEnd_toStartOf="@id/imv4"
+                app:layout_constraintStart_toEndOf="@id/imv2"
+                app:layout_constraintTop_toBottomOf="@id/getDirections" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imv4"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:background="@drawable/rounded_outline_grey"
+                android:src="@drawable/ic_add"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imv3"
+                app:layout_constraintTop_toBottomOf="@id/getDirections" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="@color/gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pickUpImageView" />
+
+            <!-- Estimated total -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/estimatedTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_20"
+                android:text="@string/estimated_total"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/amountIsNotFinal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/amount_not_final"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintStart_toStartOf="@id/estimatedTotal"
+                app:layout_constraintTop_toBottomOf="@id/estimatedTotal" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/forward"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_margin="@dimen/dp_20"
+                android:src="@drawable/ic_forward"
+                app:layout_constraintBottom_toBottomOf="@id/amountIsNotFinal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/estimatedTotal" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:text="@string/sdolor_52"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_16"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/forward"
+                app:layout_constraintEnd_toStartOf="@id/forward"
+                app:layout_constraintTop_toTopOf="@id/forward" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_margin="@dimen/dp_20"
+                android:background="@color/gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/amountIsNotFinal" />
+
+            <!-- Need Help? -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/needHelp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_20"
+                android:text="@string/need_help"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/helpIcon"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_margin="@dimen/dp_20"
+                android:src="@drawable/ic_icohelphelp"
+                app:layout_constraintBottom_toBottomOf="@id/needHelp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/needHelp" />
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_margin="@dimen/dp_20"
+                android:background="@color/gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/needHelp" />
+
+            <!-- Cancel this booking -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cancelBooking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_20"
+                android:text="@string/cancel_booking"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider3" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cancelBookingIcon"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_margin="@dimen/dp_20"
+                android:src="@drawable/ic_icohelpcancel"
+                app:layout_constraintBottom_toBottomOf="@id/cancelBooking"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/cancelBooking" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

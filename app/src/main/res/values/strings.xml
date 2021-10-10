@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">UI Test</string>
+    <string name="title_activity_maps">MapsActivity</string>
+
+    <string name="booking">Booking</string>
+    <string name="refer_a_friend">Refer a Friend</string>
+    <string name="setting">Setting</string>
+    <string name="car_name">Mazada 3</string>
+    <string name="car_model">SMS1000Z</string>
+    <string name="current_location">Current Location</string>
+    <string name="rent_a_car">Rent a car</string>
+    <string name="location">Location</string>
+    <string name="date_and_time">Date \&amp; time</string>
+    <string name="now">Now</string>
+    <string name="duration">Duration</string>
+    <string name="hr_1">1 Hr</string>
+    <string name="go">Go</string>
+    <string name="available">Available</string>
+    <string name="search_results">Search Results</string>
+    <string name="cars_found">1%d cars found</string>
+    <string name="filter">Filter</string>
+    <string name="map">Map</string>
+    <string name="seater_5">5 Seaters</string>
+    <string name="rental_fee">Rental fee</string>
+    <string name="mileage_fee">Mileage fee</string>
+    <string name="fr_rate">Fr. $3.00/hr</string>
+    <string name="km">$0.40/km</string>
+    <string name="km_5_away">0.5 KM AWAY</string>
+    <string name="booking_id">Booking ID: 1%s</string>
+    <string name="confirmed">CONFIRMED</string>
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+    <string name="days">Days</string>
+    <string name="hours">Hours</string>
+    <string name="add_to_calender">Add to Calender</string>
+    <string name="extend">Extend</string>
+    <string name="pick_up_car">Pick up car at</string>
+    <string name="pick_up_address">194 Punggol Road P100 Multi Storey Car Park</string>
+    <string name="lvl">Level 4 / Lot 123–456</string>
+    <string name="get_direction">Get directions</string>
+    <string name="estimated_total">Estimated total</string>
+    <string name="sdolor_52">S$ 52.00</string>
+    <string name="amount_not_final">*Amount is not final</string>
+    <string name="need_help">Need help?</string>
+    <string name="cancel_booking">Cancel this booking</string>
+
+</resources>
